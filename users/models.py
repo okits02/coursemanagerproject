@@ -10,6 +10,6 @@ class Users(AbstractUser):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'firs_name': self.first_name,
+            'first_name': self.first_name,
             'last_name': self.last_name,
         }
