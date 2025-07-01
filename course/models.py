@@ -19,7 +19,7 @@ class Instructor(models.Model):
 class Course(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, related_name='courses')
+    departments = models.ManyToManyField(Department, related_name='courses')
     instructor = models.ForeignKey(Instructor, on_delete=models.SET_NULL, null=True, related_name='courses')
     start_date = models.DateField()
     end_date = models.DateField()
