@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
     'rest_framework',
     'rest_framework_simplejwt',
     'corsheaders',
@@ -55,6 +56,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+AUTH_USER_MODEL = 'users.Users'
 
 ROOT_URLCONF = 'coursemanagerproject.urls'
 
